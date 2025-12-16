@@ -1,6 +1,5 @@
 # Analysis-of-carseats-sales-
-Analysis of carseats sales from the dataset Carseats from the library ISLR (R).
-This project investigates the use of decision trees for both classification and regression tasks using the Carseats dataset from the ISLR R package. The data simulates 400 retail store scenarios and includes 11 store characteristics and product placement predictors. I focus on interpreting model outputs and performance when trees are limited to a maximum depth of 2 constraint that emphasizes interpretability over complexity.
+Comprehensive analysis of sales of carseats based on open source data. The goal was to find key features that influence a product’s sales. To derive that, importances obtained by the decision tree were used. Low maximal tree depth puts more emphasis on interpretability over complexity.
 
 ##  Key Objectives
 ###  Classification: High vs. Low Sales
@@ -25,8 +24,8 @@ Top Predictors Identified:
 
 - Test Misclassification Rate: 26%
 
-##  Analysis:
-The model confirms intuitive retail insights—product placement and pricing are critical drivers of sales. The small increase in test error suggests good generalization and minimal overfitting, especially considering the tree's simplicity. However, the classification boundary is coarse due to the depth limit, and some predictive nuance is lost. Misclassified examples likely fall near the decision thresholds, indicating possible benefits from allowing deeper trees or using probabilistic models like random forests.
+###  Analysis:
+The model confirms intuitive retail insights — product placement and pricing are critical drivers of sales. The small increase in test error suggests good generalization and minimal overfitting, especially considering the tree's simplicity. However, the classification boundary is coarse due to the depth limit, and some predictive nuance is lost. Misclassified examples likely fall near the decision thresholds, indicating possible benefits from allowing deeper trees or using probabilistic models like random forests.
 
 ##  Regression: Predicting Sales Volume
 Here, we treat Sales as a continuous variable and fit a regression tree model.
@@ -49,8 +48,8 @@ Top Predictors Identified:
 
 - Test RMSE: Slightly higher, indicating some loss in predictive precision
 
-## Analysis:
-The regression model again emphasizes shelf visibility and pricing strategy as primary levers for increasing unit sales. The spread of points around the ideal line in the observed vs. predicted plot (plot below) shows notable prediction error, especially at lower sales volumes, suggesting unmodeled complexity in the data. The limited depth results in broad groupings, so individual variation is not captured well—this is a trade-off for interpretability.
+### Analysis:
+The regression model again emphasizes shelf visibility and pricing strategy as primary levers for increasing unit sales. The spread of points around the ideal line in the observed vs. predicted plot (plot below) shows notable prediction error, suggesting unmodeled complexity in the data. The limited depth results in broad groupings, so individual variation is not captured well—this is a trade-off for interpretability.
 
 ![ex2_d](https://github.com/user-attachments/assets/ceacb146-4f67-4750-bf91-343e000c2c47)
 
